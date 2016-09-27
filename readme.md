@@ -6,7 +6,6 @@ Getting started is easy, just run:
 
 ```
 npm install
-
 npm start
 ```
 
