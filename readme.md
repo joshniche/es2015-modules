@@ -5,4 +5,5 @@ You can view the modules at [`/src/breakfast.js`](src/breakfast.js) and [`/src/l
 Getting started is easy, just run:
 
 ```npm install
+
 npm start```
