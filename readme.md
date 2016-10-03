@@ -1,6 +1,6 @@
 # ES2015 Modules
 
-This is a quick demo to show how ES2015 (a.k.a. ES6) modules behave. 
+This is a quick demo to show how ES2015 (a.k.a. ES6) modules behave.
 
 You can view the modules at [`/src/breakfast.js`](src/breakfast.js) and [`/src/lunch.js`](src/lunch.js), and the executable file at [`/src/index.js`](src/index.js).
 
@@ -49,7 +49,7 @@ Importing a default export:
 import breakfast from "./breakfast.js";
 breakfast: { sausage: 'sausage', eggs: 'eggs' }
 
-Importing a value contained in a default export via destructuring:
+Importing an object value contained in a default export by destructuring the property name:
 import {sausage} from "./breakfast.js";
 sausage: undefined
 
@@ -57,12 +57,20 @@ Importing a default export from a module that does not define a default export:
 import lunch from "./lunch.js";
 lunch: undefined
 
-Importing all exported bindings from a module:
+Importing an value contained in an exported unassigned object by destructuring the property name:
+import {fries} from "./lunch.js";
+fries: fries
+
+Importing all exported bindings from a module with a default export:
 import * as wildcardBreakfast from "./breakfast.js";
 wildcardBreakfast: { toast: 'toast',
   eggs: 'eggs',
   cereal: 'cereal',
   default: { sausage: 'sausage', eggs: 'eggs' } }
+
+Importing all exported bindings from a module that exports an unassigned object:
+import * as wildcardLunch from "./lunch.js";
+wildcardLunch: { pizza: 'pizza', burger: 'burger', fries: 'fries' } 
 ```
 
 

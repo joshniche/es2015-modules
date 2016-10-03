@@ -26,7 +26,7 @@ console.log("import breakfast from \"./breakfast.js\";");
 console.log("breakfast:", breakfast, "\n");
 
 import {sausage} from "./breakfast.js";
-console.log("Importing a value contained in a default export via destructuring:");
+console.log("Importing an object value contained in a default export by destructuring the property name:");
 console.log("import {sausage} from \"./breakfast.js\";");
 console.log("sausage:", sausage, "\n");
 
@@ -35,7 +35,17 @@ console.log("Importing a default export from a module that does not define a def
 console.log("import lunch from \"./lunch.js\";");
 console.log("lunch:", lunch, "\n");
 
+import {fries} from "./lunch.js";
+console.log("Importing an value contained in an exported unassigned object by destructuring the property name:");
+console.log("import {fries} from \"./lunch.js\";");
+console.log("fries:", fries, "\n");
+
 import * as wildcardBreakfast from "./breakfast.js";
-console.log("Importing all exported bindings from a module:");
+console.log("Importing all exported bindings from a module with a default export:");
 console.log("import * as wildcardBreakfast from \"./breakfast.js\";")
 console.log("wildcardBreakfast:", wildcardBreakfast, "\n");
+
+import * as wildcardLunch from "./lunch.js";
+console.log("Importing all exported bindings from a module that exports an unassigned object:");
+console.log("import * as wildcardLunch from \"./lunch.js\";")
+console.log("wildcardLunch:", wildcardLunch, "\n");
